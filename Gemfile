@@ -4,6 +4,9 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
+gem 'bootstrap-sass'
+gem 'sprockets'
+
 group :development, :test do
   gem 'sqlite3', '1.3.9'
   gem 'guard-rspec'
