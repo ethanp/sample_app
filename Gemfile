@@ -6,6 +6,10 @@ gem 'rails', '4.1.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
+  gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 
@@ -14,8 +18,8 @@ group :test do
   # allows us to simulate a user’s interaction with the
   # sample application using a natural English-like syntax
    gem 'capybara'
-   gem 'cucumber-rails', :git => "https://github.com/cucumber/cucumber-rails.git", :require => false
-   gem "minitest", "~> 5.3.0"
+   gem 'cucumber-rails', :git => 'https://github.com/cucumber/cucumber-rails.git', :require => false
+   gem 'minitest', '~> 5.3.0'
    gem 'rspec-rails', '2.11.0'
    gem 'database_cleaner'
    gem 'factory_girl', '3.5.0'
