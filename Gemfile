@@ -4,7 +4,6 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
-gem 'bootstrap-sass'
 gem 'sprockets'
 
 group :development, :test do
@@ -38,6 +37,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',  group: :doc
 gem 'spring',  group: :development
+gem 'bootstrap-sass'
 
 
 # for deployment to Heroku
