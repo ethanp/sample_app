@@ -16,4 +16,10 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+
+  # this is super magical, I've explained what I know about it in the
+  # "Rails Notes.md" file in the "programming" repo
+  has_secure_password
+
+  validates :password, length: { minimum: 6 }  # something that we're adding
 end
