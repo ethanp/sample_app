@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/new'
+
+  # ensures that the app responds to RESTful URLs
+  # from the ActiveRecord table in the Rails Notes
+  resources :users
 
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'

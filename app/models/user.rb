@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  before_save { self.email = email.downcase }
+  before_save { self.email = self.email.downcase }
 
   validates :name, presence: true, length: { maximum: 50 }
 
@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   # [a-z]+      - at least one letter (lowercase only [we ignore case below])
   # \z          - match end of string
   # /i          - case insensitive
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
   validates :email, presence: true,
                     format: { with: VALID_EMAIL_REGEX },

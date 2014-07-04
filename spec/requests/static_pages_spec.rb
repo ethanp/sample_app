@@ -53,17 +53,24 @@ describe "Static pages" do
 
   # test that the links actually go to the right pages
   it "should have the right links on the layout" do
+
     visit root_path
+
     click_link "About"
     expect(page).to have_title(full_title('About Us'))
+
     click_link "Help"
-    expect(page).to have_table(full_title('Help'))
+    expect(page).to have_title(full_title('Help'))
+
     click_link "Contact"
-    expect(page).to have_table(full_title('Contact'))
+    expect(page).to have_title(full_title('Contact'))
+
     click_link "Home"
     click_link "Sign up now!"
-    expect(page).to have_table(full_title('Sign up'))
+    expect(page).to have_title(full_title('Sign up'))
+
     click_link "sample app"
-    expect(page).to have_table(full_title('Sample App'))
+    expect(page).to have_title(full_title('Sample App'))
+
   end
 end
