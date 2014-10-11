@@ -4,10 +4,10 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
-gem 'sprockets'
+gem 'sprockets', '~> 2.11.0'
 gem 'bcrypt'
-gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
 group :development, :test do
